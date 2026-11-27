@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#132e28"><meta name="description" content="手机单键棒球投打。看球、挥棒、配球，和 AI 打两轮。"><title>棒球投打 · 本垒对决</title><link rel="stylesheet" href="./style.css"><script type="module" src="./app.js"></script></head>
+<body><main class="shell">
+<header><div class="brand"><span class="mark" aria-hidden="true">◈</span><div><small>DIAMOND CLUB / 01</small><strong>本垒对决</strong></div></div><button id="sound" class="quiet" aria-pressed="true">音效 开</button></header>
+<section id="scoreboard" class="scores"><div><small>你</small><b id="you">0</b></div><div class="inning"><small id="round">投打训练场</small><b id="role">棒球投打</b></div><div><small>AI</small><b id="cpu">0</b></div></section>
+<section class="stadium" id="stadium"><canvas id="field" width="428" height="525" aria-label="棒球场、固定好球区与飞行中的棒球"></canvas>
+<div class="deck"><span id="badge">夜场 / 01</span><span id="balls" aria-hidden="true"></span></div>
+<div id="cover" class="cover"><div class="covercard"><span class="eyebrow" id="kicker">THE NIGHT GAME</span><h1 id="headline">棒球<span>投打</span></h1><p id="blurb">盯住本垒，在球抵达时挥棒。偏出好球区的球，放过也能得分。</p><button class="primary" id="mainAction">6 球练习</button><button class="secondary" id="subAction">对战 AI</button><button class="quiet" id="extraAction" hidden>返回首页</button></div></div>
+</section>
+<section class="controls" aria-label="本球操作">
+<div class="call" aria-live="polite" role="status"><strong id="status">眼睛跟球，出棒只需一下。</strong><span id="detail">练习 6 球 · 标准局双方各打 12 球</span></div>
+<div id="batControls" hidden><button id="swing" class="primary swing" disabled>挥棒 <kbd>空格</kbd></button></div>
+<div id="pitchControls" hidden>
+<div class="choices" aria-label="球种"><button data-speed="fast" aria-pressed="true">快直球</button><button data-speed="slow" aria-pressed="false">慢变速球</button></div>
+<div class="choices aim" aria-label="落点"><button data-aim="inside" aria-pressed="true">内角</button><button data-aim="outside" aria-pressed="false">外角</button><button data-aim="bad" aria-pressed="false">偏出</button></div>
+<button id="throw" class="primary">发球</button></div>
+</section>
+<footer><span>原创球场 · 单人对 AI</span><button class="quiet" id="home" hidden>返回首页</button></footer>
+</main></body></html>
